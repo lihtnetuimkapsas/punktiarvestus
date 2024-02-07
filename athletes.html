@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Võistlejad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="heading">Võistlejad</h1>
+        <button onclick="showAthleteForm()" id="addAthleteBtn" class="btn">Lisa võistleja</button>
+
+        <div id="addAthlete">
+            
+            <div class="form-group">
+                <label for="name">Võistleja Nimi:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label for="age">Vanuseklass:</label>
+                <select name="age" id="age">
+                    <option value="">Vali vanuseklass</option>
+                    <option value="babies">Mudilased (3-7 a)</option>
+                    <option value="kids">Lapsed (7-12 a)</option>
+                    <option value="junior">Juuniorid (12-18 a)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sport">Spordiala:</label>
+                <select name="sport" id="sport">
+                    <option value="">vali Spordiala</option>
+                    <option value="ski">Suusk</option>
+                    <option value="snowboard">Lumelaud</option>
+                </select>
+            </div>
+
+            <button onclick="hideAthleteForm()" class="btn">Katkesta</button>
+            <button type="submit" class="btn">Kinnita</button>
+
+        </div>
+
+        <div class="listContainer">
+            <table class="list">
+                <thead class="listHead">
+                    <tr>
+                        <th>Nimi</th>
+                        <th>Ala</th>
+                        <th>Vanuseklass</th>
+                        <th>Goofy/Regu</th>
+                        <th>Nr</th>
+                    </tr>
+                </thead>
+                <tbody id="listBody">
+
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <script src="athletes.js"></script>
+
+</body>
+</html>

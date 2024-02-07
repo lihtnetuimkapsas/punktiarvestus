@@ -15,20 +15,24 @@ function hideAthleteForm() {
     addAthleteBtn.style.display = 'block';
 }
 
-fetch('https://sheetdb.io/api/v1/ng4ctpea7ebkw').then((data) => {
+fetch('https://script.google.com/macros/s/AKfycbxWsoLI6Vsu7Y3SHFJIXG5GR2rZTmLePDlOG-zAEdUV7tJ36p7tEqq-958DZicdweog/exec').then((data) => {
     return data.json();
 }).then((objectData) => {
-    console.log(objectData);
+
     let tableData='';
-    objectData.map((values) => {
+    objectData.data.slice(1).map((values) => {
         tableData += `<tr>
-        <td>${values["EES- JA PEREKONNANIMI"]}</td>
+        <td>${values.TÄISNIMI}</td>
         <td></td>
         <td>${values.VANUSEKLASS}</td>
         <td>${values["GOOFY VÕI REGU"]}</td>
-        <td>${values["Võistlus nr"]}</td>
+        <td>${values["VÕISTLUS NR"]}</td>
     </tr>
     <hr/>`;
+
     });
+
     document.getElementById('listBody').innerHTML=tableData;
 })
+
+

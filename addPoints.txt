@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punktiarvestus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="heading">Punktiarvestus</h1>
+
+    <div class="form-group">
+        <label for="nimi">Võistleja nimi:</label>
+        <input type="text" id="nimi" placeholder="Sisesta nimi" class="input-field">
+    </div>
+
+    <div class="form-group">
+        <label for="punktid">Punktid:</label>
+        <input type="number" id="punktid" placeholder="Sisesta punktid" class="input-field">
+    </div>
+
+    <button onclick="lisaPunktid()" class="btn">Lisa punktid</button>
+
+    <p id="tulemus" class="result"></p>
+    <p id="parimVõistleja" class="best-player"></p>
+    <p id="top3" class="top-3"></p>
+
+    <script src="script.js"></script>
+</div>
+
+</body>
+</html>

@@ -1,3 +1,6 @@
+
+//INDEX.HTML
+
 const punktid = {};
 
 function lisaPunktid() {
@@ -51,3 +54,37 @@ document.getElementById('punktid').addEventListener('keyup', function (event) {
         lisaPunktid();
     }
 });
+
+
+// ATHLETES.HTML
+
+
+fetch('https://script.google.com/macros/s/AKfycbxWsoLI6Vsu7Y3SHFJIXG5GR2rZTmLePDlOG-zAEdUV7tJ36p7tEqq-958DZicdweog/exec').then((data) => {
+    return data.json();
+}).then((objectData) => {
+
+    let tableData='';
+    objectData.data.slice(1).map((value) => {
+        tableData += `<tr>
+            <td>${value.TÄISNIMI}</td>
+            <td></td>
+            <td>${value.VANUSEKLASS}</td>
+            <td>${value["GOOFY VÕI REGU"]}</td>
+            <td>${value["VÕISTLUS NR"]}</td>
+    </tr>
+    <hr/>`;
+
+    function showAthleteInfo() {
+        const athleteInfo = document.getElementById('athleteInfo');
+        athleteInfo.style.display = 'block';
+    }
+
+    });
+    document.getElementById('listBody').innerHTML=tableData;
+})
+
+
+
+
+
+

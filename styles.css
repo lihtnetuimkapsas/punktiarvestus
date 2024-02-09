@@ -80,3 +80,7 @@ table {
 hr {
     width: 100%;
 }
+
+#athleteInfo {
+    display: none;
+}

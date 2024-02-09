@@ -75,14 +75,6 @@ fetch('https://script.google.com/macros/s/AKfycbxWsoLI6Vsu7Y3SHFJIXG5GR2rZTmLePD
             <td>${value["GOOFY VÕI REGU"]}</td>
             <td>${value["VÕISTLUS NR"]}</td>
             </tr>
-            <tr>
-            <div id="addPoints">
-            <p><strong>1.Run</strong></p>
-            <p id="firstRun"></p>
-            <p><strong>2.Run</strong></p>
-            <p id="secondRun"></p>
-            </div>
-            </tr>
             <hr/>`;
 
     });

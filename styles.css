@@ -48,42 +48,5 @@ svg {
 
   .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-  }
+}
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  /* Styling for SVG icon */
-  .dropdown svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    vertical-align: middle;
-    margin-right: 0.5rem;
-    transition: transform 0.3s ease; /* Adding transition effect */
-  }
-
-  /* Hover effect for SVG icon */
-  .dropdown svg:hover {
-    transform: scale(1.1); /* Increasing size on hover */
-  }
-
-  /* Styling for add input button */
-  .add-input-button {
-    margin-top: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-
-  .add-input-button:hover {
-    background-color: #0056b3;
-  }

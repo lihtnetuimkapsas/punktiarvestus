@@ -72,7 +72,6 @@ fetch('https://script.google.com/macros/s/AKfycbxWsoLI6Vsu7Y3SHFJIXG5GR2rZTmLePD
           </td>
             <td>${value.TÄISNIMI}</td>
             <td></td>
-            <td>${value.VANUSEKLASS}</td>
             <td>${value["GOOFY VÕI REGU"]}</td>
             <td>${value["VÕISTLUS NR"]}</td>
     </tr>

@@ -63,12 +63,25 @@ fetch('https://script.google.com/macros/s/AKfycbxWsoLI6Vsu7Y3SHFJIXG5GR2rZTmLePD
     return data.json();
 }).then((objectData) => {
 
-    let tableData='';
+    let tableData = '';
     objectData.data.slice(1).map((value) => {
         tableData += `<tr>
-            <td><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
+            <td>
+            
+            <div class="dropdown" onclick="toggleDropdown(event)">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+  </svg>
+  <div class="dropdown-content" id="dropdownContent">
+    <div id="inputsContainer">
+      <input type="text" placeholder="Enter points for Option 1" onclick="stopPropagation(event)">
+      <input type="text" placeholder="Enter points for Option 2" onclick="stopPropagation(event)">
+      <input type="text" placeholder="Enter points for Option 3" onclick="stopPropagation(event)">
+      <button class="add-input-button" onclick="addInput(event)">Add Input</button>
+    </div>
+  </div>
+</div>
+
           </td>
             <td>${value.TÄISNIMI}</td>
             <td></td>
@@ -80,11 +93,25 @@ fetch('https://script.google.com/macros/s/AKfycbxWsoLI6Vsu7Y3SHFJIXG5GR2rZTmLePD
 
 
     });
-    document.getElementById('listBody').innerHTML=tableData;
+    document.getElementById('listBody').innerHTML = tableData;
 })
 
+function toggleDropdown(event) {
+    var dropdown = event.currentTarget;
+    dropdown.classList.toggle('active');
+}
 
+function stopPropagation(event) {
+    event.stopPropagation();
+}
 
-
-
+function addInput(event) {
+    event.stopPropagation();
+    var inputsContainer = document.getElementById('inputsContainer');
+    var newInput = document.createElement('input');
+    newInput.type = 'text';
+    newInput.placeholder = 'Enter points for Option ' + (inputsContainer.getElementsByTagName('input').length + 1);
+    newInput.onclick = stopPropagation;
+    inputsContainer.insertBefore(newInput, document.querySelector('.add-input-button'));
+}
 

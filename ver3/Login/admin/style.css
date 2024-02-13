@@ -78,7 +78,7 @@ p {
     justify-content: center;
 }
 
-table {
+#chooseNext, #score {
     width: 100%;
 }
 

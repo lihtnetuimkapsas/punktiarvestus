@@ -20,17 +20,17 @@
     <div class="choose-role">
         <p>Vali roll :</p>
     </div>
-    <div class="btn-wrap">
+    <form id="checkbox-form">
         <div class="admin-btn">
-            <input type="checkbox" id="admin" /><label for="admin">Admin</label>
+            <input type="checkbox" name="checkboxSelection" value="Admin/admin.html" id="admin" /><label for="admin">Admin</label>
         </div>
         <div class="kohtunik-btn">
-            <input type="checkbox" id="kohtunik" /><label for="kohtunik">Kohtunik</label>
+            <input type="checkbox" name="checkboxSelection" value="Kohtunik/chooseTrack.html" id="kohtunik" /><label for="kohtunik">Kohtunik</label>
         </div>
         <div class="starter-btn">
-            <input type="checkbox" id="starter" /><label for="starter">Starter</label>
+            <input type="checkbox" name="checkboxSelection" value="Starter/starter.html" id="starter" /><label for="starter">Starter</label>
         </div>
-    </div>
+    </form>
   </div>
 
   <div class="bottom-container">
@@ -38,8 +38,9 @@
         <button class="valju">Exit</button>
     </div>
     <div class="login-btn">
-        <button class="login">Login</button>
+        <button class="login" id="login">Login</button>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

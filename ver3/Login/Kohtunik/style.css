@@ -25,6 +25,9 @@ body{
 }
 
 .middle-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
     margin: 40px auto;
     width: 50%;
     border: 1px solid black;
@@ -52,3 +55,31 @@ body{
     font-size: 32px;
 }
 
+.middle-text-and-number{
+    height: 150px;
+    width: 200px;
+    background-color: #F1FCFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.left-arrow{
+    margin-right: 25px;
+}
+.right-arrow{
+    margin-left: 25px;
+}
+
+.text{
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+.number{
+    font-size: 48px;
+    color: #991b1b;
+    font-weight: 500;
+    -webkit-text-stroke: 1px rgb(75, 74, 74);
+}

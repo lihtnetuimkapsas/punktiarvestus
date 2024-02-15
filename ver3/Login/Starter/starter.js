@@ -31,16 +31,12 @@ fetch('https://script.google.com/macros/s/AKfycbysLOeQe9VjWgD4gxIFiNhlwlFXgzJSy5
             nextAthleteRow = athleteItem;
         });
 
-
-
-        // CLICK EVENT FOR "START" BUTTON (removes the name from the list, removes number from "count", sends name to "currently riding")
-
-        // displays remaning nr of athletes
+        // DISPLAYS NR OF ATHLETES
 
         let rowCount = listBody.rows.length;
         document.getElementById('listCount').innerText = rowCount;
 
-        // button click event
+        // CLICK EVENT FOR "START" BUTTON (removes the name from the list, removes number from "count", sends name to "currently riding")
 
         const start = document.getElementById('start');
 

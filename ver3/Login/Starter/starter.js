@@ -21,7 +21,7 @@ fetch('https://script.google.com/macros/s/AKfycbysLOeQe9VjWgD4gxIFiNhlwlFXgzJSy5
         document.getElementById('listBody').append(athleteItem);
 
         // CLICK EVENT FOR EACH ROW
-        
+
 
         athleteItem.addEventListener('click', () => {
             nextAthlete = athlete.name;

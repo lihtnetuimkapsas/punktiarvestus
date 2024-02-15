@@ -29,6 +29,9 @@ fetch('https://script.google.com/macros/s/AKfycbysLOeQe9VjWgD4gxIFiNhlwlFXgzJSy5
             nextNr = athlete.nr;
             showNextAthlete(athlete);
             nextAthleteRow = athleteItem;
+
+            localStorage.setItem('nextAthlete', nextAthlete);
+
         });
 
         // DISPLAYS NR OF ATHLETES

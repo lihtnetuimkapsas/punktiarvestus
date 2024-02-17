@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kohtunik</title>
@@ -11,9 +12,37 @@
             <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.666656 0.5H23.3333V3.66667H0.666656V0.5ZM0.666656 8.41667H23.3333V11.5833H0.666656V8.41667ZM23.3333 16.3333H0.666656V19.5H23.3333V16.3333Z" fill="black"/>
                 </svg>
-                
         </div>
-    </div>
+        <div class="logo">
+            <p class="logo-text">HeSi Software</p>
+        </div>
     
+    </div>
+
+    <div class="next-competitor-container">
+        <p>Järgmine võistleja:</p>
+        <p id="name, number">Võistleja Nimi, Number</p>
+    </div>
+
+    <div class="current-competitor-container">
+        <div class="ontrack">Hetkel rajal: <p>Name, number</p></div>
+        <div class="style">Stiil:<p>Goofy</p></div>
+        <div class="run">Run:<p>1</p></div>
+    </div>
+
+    <div class="score-and-comment">
+        <div class="score">23</div>
+        <div class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, aperiam?</div>
+    </div>
+
+    <button id="addPoints">Lisa Punktid</button><br>
+    <button itemref="addComment">Kommentaar</button><br>
+
+    <div class="back-send-btns">
+        <button id="backButton">Tagasi</button>
+        <button id="sendButton">Saada</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

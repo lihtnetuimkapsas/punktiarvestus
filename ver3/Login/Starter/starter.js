@@ -68,7 +68,12 @@ function showNextAthlete() {
 };
 
 function showRidingNow() {
-    document.getElementById('ridingNow').innerText = nextAthlete;
+
+    let ridingNow = document.getElementById('ridingNow');
+    ridingNow.innerText = nextAthlete;
+    localStorage.setItem('ridingNow', nextAthlete);
+
+    // document.getElementById('ridingNow').innerText = nextAthlete;
     document.getElementById('ridingNowSports').innerText = nextSports;
     document.getElementById('ridingNowNr').innerText = nextNr;
 };

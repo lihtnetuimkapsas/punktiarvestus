@@ -31,7 +31,7 @@ fetch('https://script.google.com/macros/s/AKfycbysLOeQe9VjWgD4gxIFiNhlwlFXgzJSy5
             nextAthleteRow = athleteItem;
 
             localStorage.setItem('nextAthlete', nextAthlete);
-
+            localStorage.setItem('nextNr', nextNr);
         });
 
         // DISPLAYS NR OF ATHLETES
